@@ -1,0 +1,20 @@
+hostname R2
+ip http server
+ip http secure-server
+restconf
+! username [username] privilege 15 secret [secret]
+ip http authentication local
+ip domain name restconf.test
+
+crypto key generate rsa
+2048
+
+ip ssh v 2
+
+line con 0
+exec-timeout 0 0
+
+line vty 0 15
+transport input all
+exec-timeout 0 0
+login local
