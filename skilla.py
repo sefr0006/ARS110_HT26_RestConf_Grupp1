@@ -9,8 +9,6 @@ url = "https://10.1.1.1/restconf/data/ietf-interfaces:interfaces/interface/"
 
 payload = json.dumps({
   "ietf-interfaces:interface": [
-    {"name": "GigabitEthernet0/0/0", "type": "iana-if-type:ethernetCsmacd", "enabled": False},
-    {"name": "GigabitEthernet0/0/1", "type": "iana-if-type:ethernetCsmacd", "enabled": False},
     {
       "name": "Loopback0",
       "type": "iana-if-type:softwareLoopback",
@@ -100,8 +98,6 @@ url = "https://10.1.1.2/restconf/data/ietf-interfaces:interfaces/interface"
 
 payload = json.dumps({
   "ietf-interfaces:interface": [
-    {"name": "GigabitEthernet0/0/0", "type": "iana-if-type:ethernetCsmacd", "enabled": False},
-    {"name": "GigabitEthernet0/0/1", "type": "iana-if-type:ethernetCsmacd", "enabled": False},
     {
       "name": "Loopback0",
       "type": "iana-if-type:softwareLoopback",
