@@ -1,4 +1,5 @@
 hostname R3
+no ip domain loo
 ip http server
 ip http secure-server
 restconf
