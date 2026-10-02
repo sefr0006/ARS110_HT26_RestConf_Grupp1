@@ -14,3 +14,11 @@
 * testa allting
 
 * [![tls connect error](tls_connect_error_r3.png) !! :( jätteledsen
+
+## skilla.py
+
+* ta bort allt onödigt (oanvända interfaces behövs inte vara med)
+
+## rätta.py
+
+* använd allt onödigt (oanvända interfaces ska vara oanvända)

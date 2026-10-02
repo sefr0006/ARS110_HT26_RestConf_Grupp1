@@ -158,7 +158,7 @@ payload = json.dumps({
     {
       "name": "0/1/1",
       "shutdown": [
-        None
+       False 
       ]
     }
   ]
@@ -606,10 +606,7 @@ payload = json.dumps({
       }
     },
     {
-      "name": "0/1/0",
-      "shutdown": [
-        None
-      ]
+      "name": "0/1/0"
     }
   ]
 })
