@@ -19,4 +19,6 @@ transport input all
 exec-timeout 0 0
 login local
 
-
+int g0
+ip add 10.1.1.1 255.255.255.0
+no shut
