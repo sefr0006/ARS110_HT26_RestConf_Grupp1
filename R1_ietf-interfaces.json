@@ -1,0 +1,32 @@
+{
+  "ietf-interfaces:interface": [
+    {
+      "name": "Loopback0",
+      "ietf-ip:ipv4": {"address": [{"ip": "1.16.1.1", "netmask": "255.255.255.0"}]}
+    },
+    {
+      "name": "Loopback48",
+      "ietf-ip:ipv4": {"address": [{"ip": "192.168.48.1", "netmask": "255.255.254.0"}]}
+    },
+    {
+      "name": "Loopback49",
+      "ietf-ip:ipv4": {"address": [{"ip": "192.168.49.1", "netmask": "255.255.255.0"}]}
+    },
+    {
+      "name": "Loopback50",
+      "ietf-ip:ipv4": {"address": [{"ip": "192.168.50.1", "netmask": "255.255.255.0"}]}
+    },
+    {
+      "name": "Loopback51",
+      "ietf-ip:ipv4": {"address": [{"ip": "192.168.51.1", "netmask": "255.255.255.0"}]}
+    },
+    {
+      "name": "Loopback70",
+      "ietf-ip:ipv4": {"address": [{"ip": "192.168.70.1", "netmask": "255.255.255.0"}]}
+    },
+    {
+      "name": "Serial0/1/0",
+      "ietf-ip:ipv4": {"address": [{"ip": "172.16.12.1", "netmask": "255.255.255.0"}]}
+    }
+  ]
+}
