@@ -2,7 +2,7 @@
 
 skriva redig readme
 
-
+* visa show version
 
 
 
