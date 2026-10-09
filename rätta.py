@@ -128,40 +128,40 @@ def check_ospf_p2p(native, ospf_p2p_correct):
         else:
             print(f"NO  {lo} point-to-point\n       missing\n")
 
-with open("R1_ietf-interfaces.json") as f:
-    R1_ips = json.load(f)
-# R1_ips = get_data("10.1.1.1", ips)
+# with open("R1_ietf-interfaces.json") as f:
+    # R1_ips = json.load(f)
+R1_ips = get_data("10.1.1.1", ips)
 print('R1\n')
 print('R1 IP CHECK\n')
 check_ips(R1_ips, R1_ips_correct)
 
-with open("R1_serials.json") as f:
-    R1_serials = json.load(f)
-# R1_serials = get_data("10.1.1.1", serials)
+# with open("R1_serials.json") as f:
+    # R1_serials = json.load(f)
+R1_serials = get_data("10.1.1.1", serials)
 print('\nR1 SERIAL BW CR and DCE\n')
 for serial in R1_serials["Cisco-IOS-XE-native:Serial"]:
     if serial["name"] == "0/1/0":
         check_serial(serial, True)
 
-with open("R1_eigrp.json") as f:
-    R1_eigrp = json.load(f)
-# R1_eigrp = get_data("10.1.1.1", eigrp)
+# with open("R1_eigrp.json") as f:
+    # R1_eigrp = json.load(f)
+R1_eigrp = get_data("10.1.1.1", eigrp)
 print('\nR1 EIGRP NETWORKS\n')
 check_eigrp(R1_eigrp, R1_eigrp_nets_correct)
 
-with open("R2_ietf-interfaces.json") as f:
-    R2_ips = json.load(f)
-# R2_ips = get_data("10.1.1.2", ips)
-with open("R2_native-interface.json") as f:
-    R2_native = json.load(f)
-# R2_native = get_data("10.1.1.2", native)
+# with open("R2_ietf-interfaces.json") as f:
+    # R2_ips = json.load(f)
+R2_ips = get_data("10.1.1.2", ips)
+# with open("R2_native-interface.json") as f:
+    # R2_native = json.load(f)
+R2_native = get_data("10.1.1.2", native)
 print('\nR2\n')
 print('R2 IP CHECK\n')
 check_ips(R2_ips, R2_ips_correct)
 
-with open("R2_serials.json") as f:
-    R2_serials = json.load(f)
-# R2_serials = get_data("10.1.1.2", serials)
+# with open("R2_serials.json") as f:
+    # R2_serials = json.load(f)
+R2_serials = get_data("10.1.1.2", serials)
 print('\nR2 SERIAL BW CR and DCE\n')
 for serial in R2_serials["Cisco-IOS-XE-native:Serial"]:
     if serial["name"] == "0/1/0":
@@ -169,16 +169,16 @@ for serial in R2_serials["Cisco-IOS-XE-native:Serial"]:
     if serial["name"] == "0/1/1":
         check_serial(serial, True)
 
-with open("R2_eigrp.json") as f:
-    R2_eigrp = json.load(f)
-# R2_eigrp = get_data("10.1.1.2", eigrp)
+# with open("R2_eigrp.json") as f:
+    # R2_eigrp = json.load(f)
+R2_eigrp = get_data("10.1.1.2", eigrp)
 print('\nR2 EIGRP NETWORKS\n')
 check_eigrp(R2_eigrp, R2_eigrp_nets_correct)
 check_eigrp_redist(R2_eigrp, R2_eigrp_redistribute_correct)
 
-with open("R2_ospf.json") as f:
-    R2_ospf = json.load(f)
-# R2_ospf = get_data("10.1.1.2", ospf)
+# with open("R2_ospf.json") as f:
+    # R2_ospf = json.load(f)
+R2_ospf = get_data("10.1.1.2", ospf)
 print('\nR2 OSPF NETWORKS\n')
 check_ospf(R2_ospf, R2_ospf_nets_correct)
 
@@ -202,27 +202,27 @@ else:
 print('\nR2 OSPF POINT-TO-POINT\n')
 check_ospf_p2p(R2_native, R2_ospf_p2p_correct)
 
-with open("R3_ietf-interfaces.json") as f:
-    R3_ips = json.load(f)
-# R3_ips = get_data("10.1.1.3", ips)
-with open("R3_native-interface.json") as f:
-    R3_native = json.load(f)
-# R3_native = get_data("10.1.1.3", native)
+# with open("R3_ietf-interfaces.json") as f:
+    # R3_ips = json.load(f)
+R3_ips = get_data("10.1.1.3", ips)
+# with open("R3_native-interface.json") as f:
+    # R3_native = json.load(f)
+R3_native = get_data("10.1.1.3", native)
 print('R3\n')
 print('R3 IP CHECK\n')
 check_ips(R3_ips, R3_ips_correct)
 
-with open("R3_serials.json") as f:
-    R3_serials = json.load(f)
-# R3_serials = get_data("10.1.1.3", serials)
+# with open("R3_serials.json") as f:
+    # R3_serials = json.load(f)
+R3_serials = get_data("10.1.1.3", serials)
 print('\nR3 SERIAL BW CR and DCE\n')
 for serial in R3_serials["Cisco-IOS-XE-native:Serial"]:
     if serial["name"] == "0/1/1":
         check_serial(serial, False)
 
-with open("R3_ospf.json") as f:
-    R3_ospf = json.load(f)
-# R3_ospf = get_data("10.1.1.3", ospf)
+# with open("R3_ospf.json") as f:
+    # R3_ospf = json.load(f)
+R3_ospf = get_data("10.1.1.3", ospf)
 print('\nR3 OSPF NETWORKS\n')
 check_ospf(R3_ospf, R3_ospf_nets_correct)
 
